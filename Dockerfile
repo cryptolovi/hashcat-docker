@@ -1,5 +1,7 @@
 FROM nvidia/cuda:8.0-runtime-ubuntu16.04
-RUN apt-get update && apt-get install -y git nvidia-opencl-icd-367 build-essential
+RUN apt-get update
+RUN DEBIAN_FRONTEND=noninteractive apt-get install -y -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" \ 
+git nvidia-opencl-icd-367 build-essential
 WORKDIR /home
 RUN git clone https://github.com/hashcat/hashcat.git
 RUN cd hashcat && \
