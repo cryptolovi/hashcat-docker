@@ -11,4 +11,4 @@ RUN git clone https://github.com/hashcat/hashcat.git
 RUN cd hashcat && \
 git submodule update --init
 RUN cd hashcat && make linux64
-RUN make install
+RUN cd hashcat && make install
