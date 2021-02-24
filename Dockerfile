@@ -1,5 +1,5 @@
 # docker run --runtime=nvidia -ti cryptolovi/hashcat-docker /bin/bash
-FROM nvidia/opencl:devel-ubuntu16.04
+FROM nvidia/opencl:devel-ubuntu18.04
 ENV http_proxy=
 ENV https_proxy=
 ENV HOME /root
